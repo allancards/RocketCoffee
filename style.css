@@ -33,6 +33,7 @@
     background-size: 100%;
 
     height:1000px;
+    height: 100vh;
 
     
 
@@ -56,6 +57,7 @@
   .main{
     width:100%;
     max-width:1450px;
+    margin-left: 120px;
     
     text-align: center;
 
@@ -68,18 +70,35 @@
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
 
-
   }
   .title #codetext{
     margin-left: -40px;
     color:var(--backgrond);
     -webkit-text-stroke: 1px var(--button);
   }
+.menu-section .menu .mob-text{
+  display: none;
+}
+.menu-section .menu .title-on{
+  display: none;
+}
+  
+  .menu-section .menu-toggle .three{
+    display: none;
+  }
+  .menu-section .menu .options .sep{
+    display: none;
+  }
+  
+  .main .title h1{
+    width:700px;
+  }
 
   @media (max-width: 965px ){
     html{
         font-size:50%;
     }
+    
   }
   @media (max-width:800px){
     body{
@@ -89,26 +108,111 @@
 
     }
   }
+  @media (max-width: 750px){
+    .menu-section .menu .title-on{
+      display: block;
+      margin-right:200px;
+      margin-left:-450px ;
+  
+    }
+    .menu-section .menu .mob-text{
+      display: block;
+      margin-top: 100px;
+       width:600px;
+       text-align: center;
+       font-size: 28px;
+       margin-left: -130px;
+   }
+   .menu-section .button{
+    margin-top: 420px;
+    
 
-  @media (max-width: 720px){
+   }
+   .menu-section .menu-toggle {
+    margin-left: -200px;
+    height: 40px;
+   }
+   .menu-section{
+    width:800px;
+    justify-content: space-between;
+   }
+   
+    .menu-section.on .title-on{
+      display: block;
+      margin-right:200px;
+      margin-left:100px ;
+    }
+    
+    .menu-section.on .mob-text{
+      display: none;
+      margin-top: 100px;
+      width:600px;
+      text-align: center;
+      font-size: 28px;
+      margin-left: -130px;
+    }
     .options{
         display: none;
     }
-    .button{
-        display: none;
+    
+    .menu img{
+      width:50px;
+      height: 50px;
     }
-    .one,
-    .two,
-    .three{
-        background-color: #fff;
-        height:5px;
-        width:100%;
-        margin:6px auto;
+   .one{
+    margin:30px;
+
+    transition-duration: 0.3s ;
+   }
+    .menu-toggle{
+        display: block;
 
     }
-    .menu-toggle{
-        width:40px;
-        height:30px;
-        margin-right:20px;
+    .menu-section.on{
+      
+      position: absolute;
+      top:0;
+      left:0;
+      padding:40px;
+
+      width:800px;
+      height:200vh;
+
+      background-color: var(--backgrond);
+
+      z-index: 10;
+    }
+    .menu-section.on .button{
+      display: none;
+    }
+    .menu-section.on .menu .options{
+      width:850px;
+      display: flex;
+      flex-direction: column;
+
+      margin-top: 80px;
+      margin-left:-550px;
+
+    }
+    .menu-section.on .menu .options .sep{
+      display: block;
+      margin-top:10px;
+    }
+    .menu-section.on .menu .options span{
+    
+      margin-top: 15px;
+      transition-duration: 0.5s;
+      font-size: 24px;
+      width:200vw;
+    }
+    .menu-section.on .menu-toggle .one{
+      opacity: 0;
+      margin: 0;
+    }
+    .menu-section.on .menu-toggle .three{
+      display: block;
+      margin-left: -100px;
+      margin-bottom: 30px;
+    
     }
   }
